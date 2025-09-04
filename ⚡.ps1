@@ -4,11 +4,11 @@ the settings I use for my Alienware Area-51 AA1825
 
 
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-⚠️ I used ChatGPT to gather more information about these settings ⚠️
-⚠️    i use them carefully & i've got always an eye on my temps   ⚠️
+⚠️ I used ChatGPT to gather the information about these settings  ⚠️
+⚠️ i use them carefully 😅 & i've got always an eye on my temps  ⚠️
 ⚠️     in case of issues just revert your powerconfigurations     ⚠️
 ⚠️           just use following command via powershell            ⚠️
-⚠️                                                                ⚠️
+⚠️ -------------------------------------------------------------- ⚠️
 ⚠️                powercfg -restoredefaultschemes                 ⚠️
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 
@@ -158,7 +158,7 @@ function WKS⚡ {
 $maxfreq = "75b0ae3f-bce0-45a7-8c89-c9611c25e101"
 WKS⚡ $subproc $maxfreq 4850
 
-# \ - deactivate processor performance boost mode
+# \ - deactivate processor performance boost mode - 48° buttery smooth idle / browsing / doom the dark ages <3
 WKS⚡ $subproc $eCoreMinPerf 99
 WKS⚡ $subproc $eCoreMaxPerf 99
 
