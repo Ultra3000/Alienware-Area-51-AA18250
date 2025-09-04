@@ -158,7 +158,7 @@ function WKS⚡ {
 $maxfreq = "75b0ae3f-bce0-45a7-8c89-c9611c25e101"
 WKS⚡ $subproc $maxfreq 4850
 
-# \ - deactivate processor performance boost mode - 48° buttery smooth idle / browsing / doom the dark ages <3
+  # \ - deactivate processor performance boost mode - 48° buttery smooth idle / browsing / doom the dark ages <3
 WKS⚡ $subproc $eCoreMinPerf 99
 WKS⚡ $subproc $eCoreMaxPerf 99
 
@@ -167,9 +167,9 @@ WKS⚡ $subproc $eCoreMaxPerf 99
 
 
 # ////////////////////////////////// energysaver settings ////////////////////////////////// #
-# \ - deactivating after ms
+  # \ - deactivating after ms
 WKS⚡ $sleep $sleepidle 0
-# \ - idletime after reactivation
+  # \ - idletime after reactivation
 WKS⚡ $sleep $SleepReakt 59999938
 
 
@@ -185,53 +185,53 @@ WKS⚡ $usb $usb3 0
 
 
 # ////////////////////////////////// idle resiliency settings ////////////////////////////////// #
-# \ - Zeitlimit für die zur Ausführung erforderliche Energiezustandsabfrage
+  # \ - Zeitlimit für die zur Ausführung erforderliche Energiezustandsabfrage
 WKS⚡ $IdleResiliency $ExecTimeout 4294967294
-# \ - timelimit for I/O
+  # \ - timelimit for I/O
 WKS⚡ $IdleResiliency $IOtimeout 0
 
 
 
 # ////////////////////////////////// PCIe settings ////////////////////////////////// #
-# \ - ASPM-setting for PCI Express
+  # \ - ASPM-setting for PCI Express
 WKS⚡ $pcie $PCIeASPM 0
 
 
 
 # ////////////////////////////////// drive settings ////////////////////////////////// #
-# \ - AHCI Link Power Management - HIPM/DIPM
+  # \ - AHCI Link Power Management - HIPM/DIPM
 WKS⚡ $NVMe $AHCILinkPowerManagement 0
-# \ - APST ITPT for non-operational power states (ms) on Hybrid Optane drive
+  # \ - APST ITPT for non-operational power states (ms) on Hybrid Optane drive
 WKS⚡ $NVMe $APSTITPTNonOperationalHybridOptane 3000
-# \ - Maximaler Stromverbrauch
+  # \ - Maximaler Stromverbrauch
 WKS⚡ $NVMe $MaxVerbrauch 100
-# \ - APST ITPT for non-operational power states (ms) on Hybrid Nand drive
+  # \ - APST ITPT for non-operational power states (ms) on Hybrid Nand drive
 WKS⚡ $NVMe $APSTITPTNonOperationalHybridNand 3000
-# \ - APST ITPT for non-operational power states (ms) on any NVMe drive
+  # \ - APST ITPT for non-operational power states (ms) on any NVMe drive
 WKS⚡ $NVMe $APSTITPTNonOperationalAnyNVMe 0
-# \ - time to drive off
+  # \ - time to drive off
 WKS⚡ $NVMe $driveCutoff 0
-# \ - APST ITPT for operational power states (ms) on any NVMe drive
+  # \ - APST ITPT for operational power states (ms) on any NVMe drive
 WKS⚡ $NVMe $operationalAnyNVMe 0
-# \ - Zeit für das Ignorieren von Festplattenaktivitäten
+  # \ - Zeit für das Ignorieren von Festplattenaktivitäten
 WKS⚡ $NVMe $ignoreTime 0
-# \ - APST ITPT for operational power states (ms) on Hybrid Nand drive
+  # \ - APST ITPT for operational power states (ms) on Hybrid Nand drive
 WKS⚡ $NVMe $operationalHybridNand 2000
-# \ - AHCI Link Power Management - Adaptive
+  # \ - AHCI Link Power Management - Adaptive
 WKS⚡ $NVMe $ahciAdaptive 0
-# \ - Primary NVMe Power State Transition Latency Tolerance
+  # \ - Primary NVMe Power State Transition Latency Tolerance
 WKS⚡ $NVMe $primaryLatTol 0
-# \ - Secondary NVMe Power State Transition Latency Tolerance
+  # \ - Secondary NVMe Power State Transition Latency Tolerance
 WKS⚡ $NVMe $secondaryLatTol 0
 
 
 
 # ////////////////////////////////// settings for interrupt routing ////////////////////////////////// #
-# \ - lock up interrupt routing
+  # \ - lock up interrupt routing
 WKS⚡ $interrupts $LockUp 4
-# \ - target load
+  # \ - target load
 WKS⚡ $interrupts $TargetLoad 333
-# \ - unparked duration trigger
+  # \ - unparked duration trigger
 WKS⚡ $interrupts $TimeUnparked 333
 # ⚠️////////////// "more pressure to the cores" //////////////// ⚠️ #
 # ⚠️///////////// "may be it could cause overusage" //////////// ⚠️ #
@@ -268,46 +268,46 @@ WKS⚡ $SubProc $pCoreDecreaseThreshold 100
 WKS⚡ $SubProc $eCoreMinPerf 100
   # \ - minimal p-core performance
 WKS⚡ $SubProc $pCoreMinPerf 100
-# \ - maximum e-core performance
+  # \ - maximum e-core performance
 WKS⚡ $subproc $eCoreMaxPerf 100
-# \ - maximum p-core performance
+  # \ - maximum p-core performance
 WKS⚡ $Subproc $pCoreMaxPerf 100
-# \ - e-core resource priority
+  # \ - e-core resource priority
 WKS⚡ $SubProc $eCoreResourcePrio 100
-# \ - p-core resource priority
+  # \ - p-core resource priority
 WKS⚡ $SubProc $pCoreResourcePrio 100
-# \ - e-core performance decrease order
+  # \ - e-core performance decrease order
 WKS⚡ $SubProc $ePerfDecOrder 1
-# \ - p-core performance decrease order
+  # \ - p-core performance decrease order
 WKS⚡ $SubProc $pPerfDecOrder 1
-# \ - Heterogeneous policy in effect (e-cores / p-cores -> heterogen // value 4 is AggressivePerformance -> use p-cores prefered)
+  # \ - Heterogeneous policy in effect (e-cores / p-cores -> heterogen // value 4 is AggressivePerformance -> use p-cores prefered)
 WKS⚡ $SubProc $HeterogenPol 4
 # ////////////////////////////////// processor core parking ////////////////////////////////// #
-# \ - minimal e-core count
+  # \ - minimal e-core count
 WKS⚡ $SubProc $eCoreMinCount 100
-# \ - minimal p-core count
+  # \ - minimal p-core count
 WKS⚡ $SubProc $pCoreMinCount 100
-# \ - Schwellenwert für Parallelität
+  # \ - Schwellenwert für Parallelität
 WKS⚡ $SubProc $CoreParkingThresParallel 97
-# \ - Zeit bis zum Erhöhen
+  # \ - Zeit bis zum Erhöhen
 WKS⚡ $SubProc $CoreParkingTimeTo 1
-# \ - Reduzierungsrichtlinie
+  # \ - Reduzierungsrichtlinie
 WKS⚡ $SubProc $CoreParkingReduce 0
-# \ - Wartezeit für weiches Parken
+  # \ - Wartezeit für weiches Parken
 WKS⚡ $SubProc $TimeSoftParking 0
-# \ - waiting time activity – mini e-core count
+  # \ - waiting time activity – mini e-core count
 WKS⚡ $SubProc $eCoresMinWaittime 100
-# \ - waiting time activity – mini p-core count
+  # \ - waiting time activity – mini p-core count
 WKS⚡ $SubProc $pCoresMinWaittime 100
-# \ - Zeit bis zum Reduzieren
+  # \ - Zeit bis zum Reduzieren
 WKS⚡ $SubProc $TimeforReduction 5
-# \ - maximum parked e-cores
+  # \ - maximum parked e-cores
 WKS⚡ $SubProc $eCoresMaxCount 100
-# \ - maximum parked p-cores
+  # \ - maximum parked p-cores
 WKS⚡ $SubProc $pCoresMaxCount 100
-# \ - Toleranzbereich-parallelity threshold
+  # \ - Toleranzbereich-parallelity threshold
 WKS⚡ $SubProc $ParallelTolerance 100
-# \ - Erhöhungsrichtlinie
+  # \ - Erhöhungsrichtlinie
 WKS⚡ $SubProc $increaseOrder 0
 
 
