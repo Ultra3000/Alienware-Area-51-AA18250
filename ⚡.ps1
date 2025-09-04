@@ -234,7 +234,11 @@ WKS⚡ $NVMe $secondaryLatTol 0
 # ////    changing the following settings only makes sence if you work with core-affinities ..    //// # 
 # ////     https://github.com/valleyofdoom/ReservedCpuSets @valleyofdoom to setup your system     //// #
 # ////   I used to tool the other way round .. so that everything runs on the performance cores   //// #
-# 
+# ////    for further adjustment you need https://github.com/spddl/GoInterruptPolicy @spddl       //// #
+# ////      ensure MSI-mode on your Nvidia and pin it to the best p-core (⭐)                    //// #
+# ////                 I used to pin usb-hubs to the second (⭐) performance core                //// #
+# ////    move the Intel ME/PPM/etc | ACPI | other additional stuff over to one or two e-cores    //// #
+# ////    afterwards I used Bitsum Process lasso 
   # \ - lock up interrupt routing
 WKS⚡ $interrupts $LockUp 4
   # \ - target load
