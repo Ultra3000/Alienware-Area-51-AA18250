@@ -1,6 +1,7 @@
 <#
 
-the settings I use for my Alienware Area-51 AA1825
+        the settings I use for my Alienware Area-51 AA1825
+               intel core ultra 9 275hx @ its best  
 
 
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
@@ -163,8 +164,11 @@ $maxfreq = "75b0ae3f-bce0-45a7-8c89-c9611c25e101"
 WKS⚡ $subproc $maxfreq 4850
 
   # \ - deactivate processor performance boost mode - 48° buttery smooth idle / browsing / doom the dark ages <3
-WKS⚡ $subproc $eCoreMinPerf 99
+WKS⚡ $subproc $eCoreMinPerf 99      # processor class 0 - efficency cores
 WKS⚡ $subproc $eCoreMaxPerf 99
+
+WKS⚡ $subproc $pCoreMinPerf 99      # processor class 1 - performance cores 
+WKS⚡ $subproc $pCoreMaxPerf 99
 
 ///////////////// ///////////////// ///////////////// ///////////////// ///////////////// ///////////////// #>
 
@@ -232,21 +236,38 @@ WKS⚡ $NVMe $secondaryLatTol 0
 
 # //////////////////////////////     settings for interrupt routing     ////////////////////////////// #
 # ////    changing the following settings only makes sence if you work with core-affinities ..    //// # 
+# ////     ----------------------------------------------------------------------------------     //// #
 # ////     https://github.com/valleyofdoom/ReservedCpuSets @valleyofdoom to setup your system     //// #
-# ////   I used to tool the other way round .. so that everything runs on the performance cores   //// #
-# ////    for further adjustment you need https://github.com/spddl/GoInterruptPolicy @spddl       //// #
+# ////     ----------------------------------------------------------------------------------     //// #
+# ////   I used it the other way round.. so first everything runs only on the performance cores   //// #
+# ////     ----------------------------------------------------------------------------------     //// #
+# ////   for further adjustment you need https://github.com/spddl/GoInterruptPolicy from @spddl   //// #
+# ////     ----------------------------------------------------------------------------------     //// #
 # ////      ensure MSI-mode on your Nvidia and pin it to the best p-core (⭐)                    //// #
 # ////                 I used to pin usb-hubs to the second (⭐) performance core                //// #
 # ////    move the Intel ME/PPM/etc | ACPI | other additional stuff over to one or two e-cores    //// #
-# ////    afterwards I used Bitsum Process lasso 
+# ////     ----------------------------------------------------------------------------------     //// #
+# //// afterwards I used Bitsum Process lasso https://dl.bitsum.com/files/processlassosetup64.exe //// #
+# ////     ----------------------------------------------------------------------------------     //// #
+# ////       and moved every application that is not DWM/system relevant over to the e-cores      //// #
+# ////      I dont use anything else inside of Process Lasso besides managing core affinities     //// #
+# ////                              if you want smooth performance                                //// #
+# ////                                don't fight windows or DWM                                  //// #
+# ////                        just enslave MMCSS and independent flip mode                        //// #
+# ////                                (example: Microsoft Edge:)                                  //// #
+# ////                          put the main App over -> to the e-cores                           //// #
+# ////            make sure edgewebview2 / everything with UI relevance stays on p-cores          //// #
+# ////     ----------------------------------------------------------------------------------     //// #
+
+
+# ⚠️//////////////    "more pressure to the cores"   //////////////// ⚠️ #
+# ⚠️///////////// "may be it could cause core-overusage" //////////// ⚠️ #
   # \ - lock up interrupt routing
 WKS⚡ $interrupts $LockUp 4
   # \ - target load
 WKS⚡ $interrupts $TargetLoad 333
   # \ - unparked duration trigger
 WKS⚡ $interrupts $TimeUnparked 333
-# ⚠️////////////// "more pressure to the cores" //////////////// ⚠️ #
-# ⚠️///////////// "may be it could cause core-overusage" //////////// ⚠️ #
 
 
 
