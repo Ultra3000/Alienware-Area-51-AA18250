@@ -35,8 +35,12 @@ if i'm using tools / code from other guys I hope I will always thank them 🖤
 most work for me was to get in touch with tons of information and understand whats going on
 using chatGPT is no shame .. it's been a good menthor for me .. (sometimes you have to check the info more than twice 😅)
 
-if you know some personal disorder .. you can imagine that studiing is not always possible.
+if you know some personal disorder .. you can imagine that studiing is not always possible.. in this case AI is a blessing for me 
 
+
+
+processor 0 <=> efficency cores 
+processor 1 <=> performace cores
 
 #>
 
@@ -226,7 +230,11 @@ WKS⚡ $NVMe $secondaryLatTol 0
 
 
 
-# ////////////////////////////////// settings for interrupt routing ////////////////////////////////// #
+# //////////////////////////////     settings for interrupt routing     ////////////////////////////// #
+# ////    changing the following settings only makes sence if you work with core-affinities ..    //// # 
+# ////     https://github.com/valleyofdoom/ReservedCpuSets @valleyofdoom to setup your system     //// #
+# ////   I used to tool the other way round .. so that everything runs on the performance cores   //// #
+# 
   # \ - lock up interrupt routing
 WKS⚡ $interrupts $LockUp 4
   # \ - target load
@@ -234,7 +242,7 @@ WKS⚡ $interrupts $TargetLoad 333
   # \ - unparked duration trigger
 WKS⚡ $interrupts $TimeUnparked 333
 # ⚠️////////////// "more pressure to the cores" //////////////// ⚠️ #
-# ⚠️///////////// "may be it could cause overusage" //////////// ⚠️ #
+# ⚠️///////////// "may be it could cause core-overusage" //////////// ⚠️ #
 
 
 
